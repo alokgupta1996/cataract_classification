@@ -131,7 +131,16 @@ class JIVICataractSystem:
             self.logger.info("🔄 Training CLIP model...")
             try:
                 self.clip_trainer = CLIPTrainer(device=self.device)
-                self.clip_trainer.train(use_mlflow=use_mlflow)
+                # Use train_with_mlflow method
+                config = {
+                    "data_path": "processed_images",
+                    "n_frozen_layers": 10,
+                    "num_epochs": 5,
+                    "lr": 1e-4,
+                    "batch_size": 32,
+                    "val_split": 0.2
+                }
+                self.clip_trainer.train_with_mlflow(config)
                 self.logger.info("✅ CLIP training completed successfully")
             except Exception as e:
                 self.logger.error(f"❌ CLIP training failed: {str(e)}")
@@ -140,7 +149,8 @@ class JIVICataractSystem:
             self.logger.info("🔄 Training LGBM model...")
             try:
                 self.lgbm_trainer = LGBMTrainer(device=self.device)
-                self.lgbm_trainer.train(use_mlflow=use_mlflow)
+                config = {"input_paths": {"normal": "processed_images/train/normal", "cataract": "processed_images/train/cataract"}, "augment": True, "n_aug": 3, "method": "crop", "test_path": "processed_images/test"}
+                self.lgbm_trainer.train_with_mlflow(config)
                 self.logger.info("✅ LGBM training completed successfully")
             except Exception as e:
                 self.logger.error(f"❌ LGBM training failed: {str(e)}")

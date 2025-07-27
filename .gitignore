@@ -21,6 +21,7 @@ wheels/
 *.egg
 MANIFEST
 
+processed_images/
 # PyTorch
 *.pth
 *.pt
