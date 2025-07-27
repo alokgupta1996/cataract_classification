@@ -1,0 +1,83 @@
+# Git
+.git
+.gitignore
+
+# Python
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.Python
+env
+pip-log.txt
+pip-delete-this-directory.txt
+.tox
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.log
+.git
+.mypy_cache
+.pytest_cache
+.hypothesis
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Environment
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Data (large files)
+data/processed_images/
+data/processed_aug_aug/
+data/augmentation_samples/
+
+# Performance results
+docs/performance/
+load_tests/results/
+
+# Sample logs
+logs/sample_logs/
+
+# Temporary files
+temp/
+*.tmp
+*.temp
+
+# Documentation
+*.md
+!README.md
+
+# Load test scripts
+load_tests/
+
+# Notebooks
+notebooks/
+
+# MLflow
+mlruns/ 

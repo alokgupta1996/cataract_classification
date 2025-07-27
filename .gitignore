@@ -1,0 +1,91 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyTorch
+*.pth
+*.pt
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Environment
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# MLflow
+mlruns/
+
+# Temporary files
+temp/
+*.tmp
+*.temp
+
+# Data (large files)
+data/processed_images/
+data/processed_aug_aug/
+data/augmentation_samples/
+
+# Models (large files)
+models/
+
+# Performance results (can be regenerated)
+docs/performance/
+
+# Load test results (can be regenerated)
+load_tests/results/
+
+# Sample logs
+logs/sample_logs/
+
+# Customer data (sensitive)
+temp/customer_data/
+temp/training_data/
+
+# Cache
+.cache/
+*.cache 
