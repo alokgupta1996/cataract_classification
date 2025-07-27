@@ -3,6 +3,7 @@
 ## 📌 Objective
 
 The goal of this project is to build a binary classification model that identifies cataracts in eye images and exposes this functionality through a **production-ready, scalable API**. The solution emphasizes:
+ASSUMPTIONS- FOR NOW I HAVE ASSUMED THAT DATA WILL CONTAIN THE EYE IMAGE ONLY WE MIGHT WANT TO ADD A NEW CLASS TO HANDLE THE NON EYE CASES
 
 - **Fast inference** using vector-based models (LGBM)
 - **High accuracy** using a deep learning model (CLIP + transfer learning)
@@ -293,8 +294,6 @@ cataract-classifier/
     └── temp/                       # Temporary files
 ```
 
-**For detailed structure, see [PROJECT_STRUCTURE.md](PROJECT_STRUCTURE.md)**
-
 ## 🏭 Production-Ready Features
 
 ### **1. MLflow Experiment Management**
@@ -372,8 +371,6 @@ cataract-classifier/
 
 ## 📬 Contact
 
-For questions or suggestions, please contact [yourname@domain.com].
-
 ---
 
 **Note**: This implementation exceeds the original assignment requirements by providing a production-ready, scalable solution with comprehensive MLflow experiment tracking, Ray-powered concurrent processing, sophisticated model management, and enterprise-grade monitoring capabilities. 
@@ -421,7 +418,5 @@ for i in {1..10}; do
     -F "file=@test_image.jpg" &
 done
 ```
-
-For detailed deployment instructions, see [DEPLOYMENT_GUIDE.md](DEPLOYMENT_GUIDE.md).
 
 ## 🚀 Quick Start 
