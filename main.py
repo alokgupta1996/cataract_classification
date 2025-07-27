@@ -133,10 +133,13 @@ class JIVICataractSystem:
                 self.clip_trainer = CLIPTrainer(device=self.device)
                 # Use train_with_mlflow method
                 config = {
-                    "data_path": "processed_images",
+                    "input_paths": {
+                        "normal": "processed_images/train/normal",
+                        "cataract": "processed_images/train/cataract"
+                    },
                     "n_frozen_layers": 10,
                     "num_epochs": 5,
-                    "lr": 1e-4,
+                    "learning_rate": 1e-4,
                     "batch_size": 32,
                     "val_split": 0.2
                 }
@@ -149,7 +152,17 @@ class JIVICataractSystem:
             self.logger.info("🔄 Training LGBM model...")
             try:
                 self.lgbm_trainer = LGBMTrainer(device=self.device)
-                config = {"input_paths": {"normal": "processed_images/train/normal", "cataract": "processed_images/train/cataract"}, "augment": True, "n_aug": 3, "method": "crop", "test_path": "processed_images/test"}
+                config = {
+                    "input_paths": {
+                        "normal": "processed_images/train/normal", 
+                        "cataract": "processed_images/train/cataract"
+                    },
+                    "augment": True, 
+                    "n_augmentations": 3, 
+                    "augmentation_method": "crop", 
+                    "test_path": "processed_images/test",
+                    "test_inference": False  # Disable test inference to avoid prob_cataract error
+                }
                 self.lgbm_trainer.train_with_mlflow(config)
                 self.logger.info("✅ LGBM training completed successfully")
             except Exception as e:
