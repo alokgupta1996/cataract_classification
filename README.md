@@ -3,6 +3,7 @@
 ## 📌 Objective
 
 The goal of this project is to build a binary classification model that identifies cataracts in eye images and exposes this functionality through a **production-ready, scalable API**. The solution emphasizes:
+ASSUMPTIONS- FOR NOW I HAVE ASSUMED THAT DATA WILL CONTAIN THE EYE IMAGE ONLY WE MIGHT WANT TO ADD A NEW CLASS TO HANDLE THE NON EYE CASES
 
 - **Fast inference** using vector-based models (LGBM)
 - **High accuracy** using a deep learning model (CLIP + transfer learning)
