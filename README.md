@@ -10,6 +10,13 @@ The goal of this project is to build a binary classification model that identifi
 - **Ray-powered concurrent processing** for high-throughput production deployment
 - **Comprehensive MLflow tracking** for experiment management and model lifecycle
 
+The logic behind having two model is use the first model for very fast results also the second model is fast but we can combine them together when the output of the first model is in mid range we can call the 2nd model else we can output the first model
+
+Once in a while we can trigger the training using the human loop and the accuracy of the bigger model to make the current model better.
+
+Every data that is uploaded by the customer goes into a data directory and can be utilized for training newer models.
+
+
 ## 📁 Dataset
 
 We used a publicly available Cataract Image Dataset consisting of labeled images of normal and cataract-affected eyes.
