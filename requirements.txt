@@ -19,7 +19,6 @@ ray>=2.0.0
 
 # Image processing and augmentation
 albumentations>=1.1.0
-albumentations-pytorch>=0.1.0
 
 # MLflow for experiment tracking
 mlflow>=1.20.0
@@ -39,7 +38,3 @@ openpyxl>=3.0.0
 
 # System monitoring
 psutil>=5.8.0
-
-# Jupyter support (for notebooks)
-ipywidgets>=7.6.0
-jupyter>=1.0.0 
