@@ -21,7 +21,6 @@ wheels/
 *.egg
 MANIFEST
 
-processed_images/
 # PyTorch
 *.pth
 *.pt
@@ -72,7 +71,7 @@ data/processed_aug_aug/
 data/augmentation_samples/
 
 # Models (large files)
-models/
+
 
 # Performance results (can be regenerated)
 docs/performance/
